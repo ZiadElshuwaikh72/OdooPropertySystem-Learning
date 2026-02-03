@@ -1,0 +1,30 @@
+.list-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.list-table th {
+    color:white;
+    background: blue;
+    text-align: center;
+    padding: 8px;
+}
+
+.list-table td {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.list-row:hover {
+    background-color: #f9fafb;
+}
+
+

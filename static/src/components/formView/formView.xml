@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="app_one.FormView">
+        <div class="form-container">
+
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input class="form-input" t-model="state.name" placeholder="Enter property name"/>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">PostCode</label>
+                <input class="form-input"  t-model="state.postcode" placeholder="Enter Postcode"/>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Date Availability</label>
+                <input class="form-input" t-model="state.date_availability" type="date"/>
+            </div>
+
+            <div class="form-footer">
+                <button class="btn btn-primary"  t-on-click="this.CreateRecord">
+                    Save
+                </button>
+
+                <button class="btn btn-secondary" t-on-click="this.Cancel">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
+    </t>
+</templates>

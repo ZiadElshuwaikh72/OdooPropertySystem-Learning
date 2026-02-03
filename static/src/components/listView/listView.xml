@@ -1,0 +1,36 @@
+<templates xml:space="preserve">
+    <t t-name="app_one.ListView">
+        <h1 class="list-title">Properties List </h1>
+            <button class="btn btn-primary m-2 p-2" t-on-click="toggleCreateForm">
+                    <t t-if="state.showCreateForm">Close</t>
+                    <t t-else="">New</t>
+            </button>
+            <t t-if="state.showCreateForm">
+                <FormView onRecordCreated="onRecordCreated" onCancel="toggleCreateForm.bind(this)"/>
+            </t>
+
+        <table class="list-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Postcode</th>
+                    <th>Date Availability</th>
+                    <th>Expected price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <t t-foreach="state.records" t-as="record" t-key="record.id">
+                    <tr class="list-row">
+                        <td><t t-esc="record.name"/></td>
+                        <td><t t-esc="record.postcode"/></td>
+                        <td><t t-esc="record.date_availability"/></td>
+                        <td><t t-esc="record.expected_price"/></td>
+                        <td><button class="btn btn-danger" t-on-click="deleteRecords.bind(this,record.id)">Delete</button></td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </t>
+</templates>

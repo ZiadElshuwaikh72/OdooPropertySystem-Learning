@@ -1,0 +1,15 @@
+.header_custom table thead > tr > th {
+    background-color: blue !important;
+    color: white !important;
+    text-align:center !important;
+}
+
+.header_custom table thead > tr > th:nth-child(2) {
+    width: 100px !important;
+}
+/*
+.header_custom table tbody > tr > td:nth-child(odd) {
+    color:red !important;
+    background:gray !important;
+}
+*/
